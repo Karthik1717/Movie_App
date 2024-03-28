@@ -51,13 +51,13 @@ const Header = () => {
 		return () => unsubscribe();
 	}, []);
 	return (
-		<div className='absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-full flex justify-between'>
-			<img className='w-48' src={LOGO} alt='logo' />
+		<div className='absolute px-4 md:px-8 py-2 bg-gradient-to-b from-black z-10 w-full flex flex-col md:flex-row justify-between'>
+			<img className='w-48 mx-auto md:mx-0' src={LOGO} alt='logo' />
 			{user && (
-				<div className='flex p-2'>
+				<div className='flex p-2 justify-between'>
 					{showGptSearch && (
 						<select
-							className='p-2 bg-gray-900 text-white m-2'
+							className='p-0 my-2 md:p-2 bg-gray-900 text-white md:m-2 rounded-lg'
 							onChange={handleLanguageChange}
 						>
 							{SUPPORTED_LANGUAGES.map((lang) => (
@@ -71,13 +71,13 @@ const Header = () => {
 						</select>
 					)}
 					<button
-						className='py-2 px-4 my-2 mx-4 bg-purple-800 text-white rounded-lg'
+						className='py-2 px-4 mx-4 md:px-4 my-2 md:mx-4 bg-purple-800 text-white rounded-lg'
 						onClick={handleGptSearchClick}
 					>
 						{showGptSearch ? "Home" : "Gpt Search"}
 					</button>
 					<img
-						className='w-12 h-12'
+						className='w-12 h-12 hidden md:inline-block'
 						src={user?.photoURL || USER_AVATAR}
 						alt='usericon'
 					/>

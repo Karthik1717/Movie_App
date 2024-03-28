@@ -4,7 +4,7 @@ import defaultPoster from "../static/default.jpg";
 
 const MovieCard = ({ posterPath }) => {
 	return (
-		<div className='w-56 pr-4'>
+		<div className='w-36 md:w-56 pr-4'>
 			<img
 				alt='Movie Card'
 				src={posterPath ? IMG_CDN + posterPath : defaultPoster}

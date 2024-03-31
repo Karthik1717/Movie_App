@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
 const VideoTitle = ({ title, overview }) => {
@@ -9,7 +11,8 @@ const VideoTitle = ({ title, overview }) => {
 			</p>
 			<div className=''>
 				<button className='bg-white text-black py-1 md:py-4 px-3 my-4 md:my-0 md:px-12 text-xl rounded-lg hover:bg-opacity-80'>
-					▶️ Play
+					<FontAwesomeIcon icon={faPlay} />
+					Play
 				</button>
 				<button className='mx-2 bg-gray-500 text-white p-4 px-12 text-xl bg-opacity-50 rounded-lg hidden md:inline-block'>
 					More Info
